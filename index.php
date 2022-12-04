@@ -20,7 +20,7 @@ include("includes/header.php");
     <h3 class="w3-wide"><b>GearBox</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button" id="myBtn">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button" id="myBtn">Home</a>
     <a href="Products.html" class="w3-bar-item w3-button">Products</a>
     <a href="AboutUs.html" class="w3-bar-item w3-button">About Us</a>
     <a href="ContactUs.html" class="w3-bar-item w3-button">Contact Us</a>

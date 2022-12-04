@@ -24,7 +24,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>GearBox</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button" id="myBtn">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button" id="myBtn">Home</a>
     <a href="Products.html" class="w3-bar-item w3-button">Products</a>
     <a href="AboutUs.html" class="w3-bar-item w3-button">About Us</a>
     <a href="ContactUs.html" class="w3-bar-item w3-button">Contact Us</a>
@@ -60,22 +60,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
-<div class="w3-col s4">
-    <h4>About</h4>
-    <p><a href="#">About us</a></p>
-    <p><a href="#">We're hiring</a></p>
-    <p><a href="#">Support</a></p>
-    <p><a href="#">Find store</a></p>
-    <p><a href="#">Shipment</a></p>
-    <p><a href="#">Payment</a></p>
-    <p><a href="#">Gift card</a></p>
-    <p><a href="#">Return</a></p>
-    <p><a href="#">Help</a></p>
-  </div>
+<div class="w3-light-grey w3-center w3-xlarge w3-padding-32">
+    <h4><b>About GearBox</h4></b>
+    <p>Dummy Text</p>
+</div>
 
 
 
-<footer class="w3-black w3-center w3-text-grey w3-small w3-padding-16">
+<footer class="w3-black w3-center w3-text-grey w3-small w3-padding-16" id="footer">
     <p>GearBox® LLC, 1600 Amphitheatre Parkway, Mountain View, CA. Est. 2022</p>
 </footer>
 
