@@ -7,7 +7,10 @@ app = Flask(__name__)
 def hoofdpagina():
     return render_template("index.html")
 @app.route("/SignIn.html")
-def Sign():
+def SignIn():
     return render_template("SignIn.html")
+@app.route("/SignUp.html")
+def SignUp():
+    return render_template("SignUp.html")
 if __name__ == '__main__':
     app.run(debug=True)
