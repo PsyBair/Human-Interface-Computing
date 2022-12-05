@@ -1,12 +1,5 @@
-<?php
 
-session_start();
-
-
-include("includes/header.php");
-
-?>
-
+{% include "includes/header.html" %}
 
   <!-- MAIN -->
   <main>
@@ -27,27 +20,19 @@ include("includes/header.php");
 
 
 
-
 <div class="col-md-12" ><!-- col-md-12 Starts -->
+<div class="box" >
 
-<?php
-include("customer/customer_login.php");
-?>
+</div><!-- box Ends -->
 
-
+{% include "customer/customer_login.html" %}
 </div><!-- col-md-12 Ends -->
 
 
 </div><!-- container Ends -->
 </div><!-- content Ends -->
 
-
-
-<?php
-
-include("includes/footer.php");
-
-?>
+{% include "includes/footer.html" %}
 
 <script src="js/jquery.min.js"> </script>
 

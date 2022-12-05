@@ -3,29 +3,16 @@
 
 
 
-
-<?php
-include("includes/header.php");
-?>
-
-
+{% include "includes/header.html" %}
 <body class="w3-content" style="max-width:1200px">
 
 
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>GearBox</b></h3>
-  </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="index.php" class="w3-bar-item w3-button" id="myBtn">Home</a>
-    <a href="Products.php" class="w3-bar-item w3-button">Products</a>
-    <a href="AboutUs.php" class="w3-bar-item w3-button">About Us</a>
-    <a href="ContactUs.php" class="w3-bar-item w3-button">Contact Us</a>
-    </div>
-</nav>
+{% include "includes/sidebar.html" %}
+
+
+
 
 
 
@@ -48,23 +35,23 @@ include("includes/header.php");
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <a href="SignIn.php" class="w3-bar-item w3-button">Sign In/Sign Up</a>
-      <a href="Cart.php" class="fa fa-shopping-cart w3-margin-right"></a>
+      <a href="SignIn.html" class="w3-bar-item w3-button">Sign In/Sign Up</a>
+      <a href="Cart.html" class="fa fa-shopping-cart w3-margin-right"></a>
     </p>
   </header>
 
   <!-- Image header -->
   <div class="w3-display-container w3-container w3-center w3-border">
-    <img src="Assets/3chests.jpg" alt="Image of 3 GearBoxes" style="width:20%">
+    <img src="templates\Assets\3chests.jpg" alt="Image of 3 GearBoxes" style="width:20%">
     <p><b>We are GearBox, and we are the premium source of gear and gifts for nature lovers everywhere, 
       delivered monthly directly to your door. Click below to receive one of our three tiers of GearBoxes! </p></b>
   </div>
 
   <!-- Product grid -->
   <div class="w3-display-container w3-container w3-center w3-border w3-black w3-text-white w3-xlarge w3-padding-16">
-    <a href="Products.php" class="w3-bar-item w3-button"><b>Silver GearBox</b></a>
-    <a href="Products.php" class="w3-bar-item w3-button"><b>Gold GearBox</b></a>
-    <a href="Products.php" class="w3-bar-item w3-button"><b>Diamond GearBox</b></a>
+    <a href="Products.html" class="w3-bar-item w3-button"><b>Silver GearBox</b></a>
+    <a href="Products.html" class="w3-bar-item w3-button"><b>Gold GearBox</b></a>
+    <a href="Products.html" class="w3-bar-item w3-button"><b>Diamond GearBox</b></a>
     <div class="w3-large">
       <p>Silver is our most affordable GearBox</p>               
       <p>With Gold, you'll receive even more items</p>               
@@ -72,11 +59,7 @@ include("includes/header.php");
   </div>
   </div>
 
-  
-<?php
-
-include("includes/footer.php");
-?>
+  {% include 'includes/footer.html' %}
   <!-- End page content -->
 
 
