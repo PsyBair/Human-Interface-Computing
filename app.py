@@ -7,9 +7,7 @@ app = Flask(__name__)
 def hoofdpagina():
     return render_template("index.html")
 @app.route("/SignIn.html")
-def signinsingup():
+def Sign():
     return render_template("SignIn.html")
-
-
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
