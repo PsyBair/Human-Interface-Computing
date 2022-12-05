@@ -41,8 +41,15 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <a href="SignIn.html" class="w3-bar-item w3-button">Sign In/Sign Up</a>
-      <a href="Cart.html" class="fa fa-shopping-cart w3-margin-right"></a>
+      <a href= "login" class="w3-bar-item w3-button">
+        
+        {% if username %}
+        Hello {{username}}
+        {% else %}
+        SignIn/SignUp
+        {% endif %}
+        </a>
+      <a href="Cart" class="fa fa-shopping-cart w3-margin-right"></a>
     </p>
   </header>
 
@@ -79,9 +86,6 @@ function w3_close() {
 }
 
 </script>
-<script src="js/jquery.min.js"> </script>
-
-<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>

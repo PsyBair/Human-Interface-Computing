@@ -120,22 +120,22 @@
   <!-- Image header -->
   <div class="w3-display-container w3-container w3-center w3-border">
     <img src="static\Assets\3chests.jpg" alt="Image of 3 GearBoxes" style="width:20%">
-    <form action="/action_page.php">
+    <form method="POST" action="">
       <div class="container ">
         <hr>
     
         <p style="text-align:left; margin-left: 1px;"><b>Email</b></p>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
-        
-        <p style="text-align:left; margin-left: 1px;"><b>Password</b></p>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        {{form.hidden_tag()}}
+        {{form.mail}}        
+        <p style="text-align:left; margin-left: 1px;"><b>Username</b></p>
+        {{form.username}}
     
         
-        <p style="text-align:left; margin-left: 1px;"><b>Repeat Password</b></p>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <p style="text-align:left; margin-left: 1px;"><b>Password</b></p>
+        {{form.password}}
         <hr>
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button type="submit" class="google btn">Register </button>
+        {{form.submit}}
         <p>Already have an account?  <input type="submit" value="Login">.</p>
       </div>
       
