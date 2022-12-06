@@ -1,0 +1,16 @@
+<!-- Top header -->
+<header class="w3-container w3-xlarge">
+    <p class="w3-right">
+      <a href= "login" class="w3-bar-item w3-button">
+        
+        {% if username %}
+        Hello {{username}}
+        {% else %}
+        SignIn/SignUp
+        {% endif %}
+        </a>
+      <a href="cart" class="fa fa-shopping-cart w3-margin-right"></a>
+    </p>
+  </header>
+
+  <!-- Image header -->

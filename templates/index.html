@@ -36,22 +36,9 @@
 <div class="w3-hide-large" style="margin-top:83px"></div>
 <!-- End Small Screen Formatting -->
 
+{% include 'includes/topbar.html' %}
 
-
-  <!-- Top header -->
-  <header class="w3-container w3-xlarge">
-    <p class="w3-right">
-      <a href= "login" class="w3-bar-item w3-button">
-        
-        {% if username %}
-        Hello {{username}}
-        {% else %}
-        SignIn/SignUp
-        {% endif %}
-        </a>
-      <a href="Cart" class="fa fa-shopping-cart w3-margin-right"></a>
-    </p>
-  </header>
+  
 
   <!-- Image header -->
   <div class="w3-display-container w3-container w3-center w3-border">

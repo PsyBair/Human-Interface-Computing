@@ -1,4 +1,4 @@
-from flask import Flask,redirect
+from flask import Flask,redirect, session
 from flask import jsonify
 from flask_cors import CORS
 from flask import request
@@ -24,6 +24,8 @@ login_manager.login_view = "login"
 @login_manager.user_loader
 def load_user(user_id):
     return "quoc"
+
+
 
 
 
@@ -56,7 +58,6 @@ def ifUserInDatabase(username,password):
     return result
 
 def addUser(username,password,mail):
-    print("You dumPPPPPPPPPPPPPPPPPPPPPPPP", file=sys.stderr)
     data = readCsv("login")
 
     r = username + "," + password + "," + mail
@@ -79,13 +80,41 @@ def jsonFile():
     return jsonify({'data':data})
 
 
+@app.route("/contact")
+def loadContact():
+    if "user" in session:
+        return render_template("Cart.html", username = session["user"])
+    else:
+        return render_template("ContactUs.html")
+    
+@app.route("/checkout")
+def loadCheckOut():
+    if "user" in session:
+        return render_template("Checkout.html", username = session["user"])
+    else:
+        return render_template("Checkout.html")
+    
+@app.route("/aboutus")
+def func():
+    if "user" in session:
+        return render_template("AboutUs.html", username = session["user"])
+    else:
+        return render_template("AboutUs.html")
 
+@app.route("/cart")
+def loadCart():
+    if "user" in session:
+        return render_template("Cart.html", username = session["user"])
+    else:
+        return render_template("Cart.html")
 
 @app.route("/")
 def hoofdpagina():
-    username = request.args.get('username')
-    return render_template("index.html", username = username)
-    
+    if "user" in session:
+        return render_template("index.html", username = session["user"])
+    else:
+        return render_template("index.html")
+
         
 @app.route("/login",methods=['GET','POST'])
 def login():
@@ -94,7 +123,8 @@ def login():
     if form.validate_on_submit():
         check = ifUserInDatabase(form.username.data,form.password.data)
         if check:
-            return redirect("/?username=" + form.username.data)
+            session["user"] = form.username.data
+            return redirect("/")
     return render_template("SignIn.html",form=form)
     
 @app.route("/signup",methods=['GET','POST'])
