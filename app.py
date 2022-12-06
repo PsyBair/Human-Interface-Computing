@@ -94,6 +94,14 @@ def loadCheckOut():
     else:
         return render_template("Checkout.html")
     
+
+@app.route("/products")
+def loadProducts():
+    if "user" in session:
+        return render_template("Products.html", username = session["user"])
+    else:
+        return render_template("Products.html")
+    
 @app.route("/aboutus")
 def func():
     if "user" in session:
