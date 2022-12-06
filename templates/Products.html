@@ -1,1 +1,128 @@
 
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>GearBox Products Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+
+.lhs{
+ float: left;
+ width: 45%;
+}
+.rhs{
+ float: right;
+ width: 45%;
+}
+
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+
+
+<!-- Sidebar/menu -->
+{% include "includes/sidebar.html" %}
+
+
+
+<!-- Small Screen Formatting -->
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">GearBox</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+<!-- Push down content on small screens -->
+<div class="w3-hide-large" style="margin-top:83px"></div>
+<!-- End Small Screen Formatting -->
+
+
+
+  <!-- Top header -->
+  {% include 'includes/topbar.html' %}
+<!-- End Basic Page Setup -->
+
+<main class="container">
+ 
+    <!-- Left Column -->
+    <div class="left-column">
+      <img data-image="black" src="static/Assets/silverbox.jpg" alt="">
+    </div>
+   
+   
+    <!-- Right Column -->
+    <div class="right-column">
+   
+      <!-- Product Description -->
+      <div class="product-description">
+        <h1>Silver Box</h1>
+        <p>Our Budget Box</p>
+      </div>
+   
+   
+      <!-- Product Pricing -->
+      <div class="product-price">
+        <span>$30</span>
+        <button>Add To Cart</button>
+      </div>
+    </div>
+
+     <!-- Left Column -->
+     <div class="left-column">
+        <img data-image="black" src="static/Assets/goldbox.jpg" alt="">
+      </div>
+     
+     
+      <!-- Right Column -->
+      <div class="right-column">
+     
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1>Gold Box</h1>
+          <p>Our Most Popular Box</p>
+        </div>
+     
+     
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>$50</span>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+       <!-- Left Column -->
+    <div class="left-column">
+        <img data-image="black" src="static/Assets/diamondbox.jpeg" alt="">
+      </div>
+     
+     
+      <!-- Right Column -->
+      <div class="right-column">
+     
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1>Diamond Box</h1>
+          <p>Our Enthusiast Box</p>
+        </div>
+     
+     
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>$80</span>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+  </main>
