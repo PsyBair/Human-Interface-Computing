@@ -56,10 +56,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <!-- End Basic Page Setup -->
 
 <main class="container">
- 
+    <center>
     <!-- Left Column -->
     <div class="left-column">
-      <img data-image="black" src="static/Assets/silverbox.jpg" alt="">
+      <img data-image="black" src="static/Assets/silverbox.jpg" alt=""  width="700" height="500" >
     </div>
    
    
@@ -68,21 +68,23 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
    
       <!-- Product Description -->
       <div class="product-description">
+        <center>
         <h1>Silver Box</h1>
         <p>Our Budget Box</p>
+        </center>
       </div>
    
    
       <!-- Product Pricing -->
       <div class="product-price">
         <span>$30</span>
-        <button>Add To Cart</button>
+        <button type="submit" class="w3-button w3-block w3-black">Add To Cart</button>
       </div>
     </div>
-
+<div><h1></h1></div>
      <!-- Left Column -->
      <div class="left-column">
-        <img data-image="black" src="static/Assets/goldbox.jpg" alt="">
+        <img data-image="black" src="static/Assets/goldbox.jpg" alt="" width="700" height="500">
       </div>
      
      
@@ -99,13 +101,15 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!-- Product Pricing -->
         <div class="product-price">
           <span>$50</span>
-          <button>Add To Cart</button>
+          <button type="submit" class="w3-button w3-block w3-black">Add To Cart</button>
         </div>
       </div>
 
+      <div><h1></h1></div>
+
        <!-- Left Column -->
     <div class="left-column">
-        <img data-image="black" src="static/Assets/diamondbox.jpeg" alt="">
+        <img data-image="black" src="static/Assets/diamondbox.jpeg" alt="" width="700" height="500">
       </div>
      
      
@@ -122,7 +126,25 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!-- Product Pricing -->
         <div class="product-price">
           <span>$80</span>
-          <button>Add To Cart</button>
+          <button type="submit" class="w3-button w3-block w3-black">Add To Cart</button>
         </div>
       </div>
+      </center>
+      
+
+      {% include 'includes/footer.html' %}
+      <!-- End page content -->
+    
+    
+    <script>
+    // Open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    } 
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
   </main>
